@@ -31,9 +31,9 @@ class GroupsController < ApplicationController
 
       @group.update(group_params)
 
-      redirect_to groups_path, notice: "Update Success"
-    end
-  
+      redirect_to groups_path, flash[:notice] = "Update Success!"
+  end
+
 
    private
 
